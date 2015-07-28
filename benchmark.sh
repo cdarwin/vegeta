@@ -6,4 +6,4 @@
 [[ -z $TIMEOUT ]] && TIMEOUT="${4:-10s}"
 [[ -z $REPORTER ]] && REPORTER="${5:-json}"
 
-echo "GET ${TARGET}" | /go/bin/vegeta attack -duration=${DURATION} -rate=${RATE} -timeout=${TIMEOUT} | /go/bin/vegeta report -reporter=${REPORTER}
+echo "GET ${TARGET}" | /go/bin/vegeta attack -duration=${DURATION} -rate=${RATE} -timeout=${TIMEOUT} | /go/bin/vegeta report -reporter=${REPORTER} -output=vegeta.log
